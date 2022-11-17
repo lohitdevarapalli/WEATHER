@@ -1,0 +1,29 @@
+---
+title: "Weather Prediction"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+```{r}
+#Read the data 
+w<-read.csv("weather.csv")
+head(w)
+```
+
+Selecting the required features
+```{r}
+df=w[9:48]
+head(df)
+```
+
+Deleting the second feature also
+
+```{r}
+df2<-df[,-2]
+head(df2)
+```
+
+Remove missing values
+```{r}
+na.omit(df2)
+```
